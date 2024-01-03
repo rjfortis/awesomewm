@@ -24,7 +24,6 @@ local has_fdo, freedesktop = pcall(require, "freedesktop")
 
 -- Custom Variables	
 local logout_menu_widget = require("logout-menu-widget.logout-menu")
-local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -237,7 +236,6 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
-            volume_widget(),
             logout_menu_widget(),
         },
     }
